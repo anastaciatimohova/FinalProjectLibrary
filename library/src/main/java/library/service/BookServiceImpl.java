@@ -110,7 +110,7 @@ public class BookServiceImpl implements BookService {
                                 }
                                 break;
                         }
-                        if (choice < 1 && choice > 4) {
+                        if (choice < 1 || choice > 4) {
                             System.out.println("Вы ввели неверное число, попробуйте ещё раз:");
                         }
                     } catch (NumberFormatException e) {
@@ -121,7 +121,6 @@ public class BookServiceImpl implements BookService {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     @Override
@@ -138,7 +137,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void addBookXML() throws SQLException {
+    public void addBookXML() {
         ValidatorXML validatorXML = new ValidatorXML();
         ParserDOM parserDOM = new ParserDOM();
         String xml = "D:\\Java_FreeIT\\final-project\\library\\src\\main\\java\\library\\files\\Books.xml";
@@ -154,11 +153,7 @@ public class BookServiceImpl implements BookService {
                         System.out.println("Такая книга уже существует.");
                     }
                 }
-            } catch (ParserConfigurationException e) {
-                e.printStackTrace();
-            } catch (IOException exception) {
-                exception.printStackTrace();
-            } catch (SAXException e) {
+            } catch (ParserConfigurationException | IOException | SAXException | SQLException e) {
                 e.printStackTrace();
             }
         }else{

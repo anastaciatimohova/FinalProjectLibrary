@@ -79,7 +79,7 @@ public class BookDaoImpl implements BookDao {
                 PreparedStatement statement1 = connection1.prepareStatement("update books set title = ? where id = ?");
                 statement1.setString(1, newName);
                 statement1.setString(2, String.valueOf(id));
-                int i1 = statement1.executeUpdate();
+                statement1.executeUpdate();
                 connection1.close();
                 return true;
             case 2:
@@ -89,7 +89,7 @@ public class BookDaoImpl implements BookDao {
                     PreparedStatement statement2 = connection2.prepareStatement("update books set author_id = ? where id = ?");
                     statement2.setString(1, String.valueOf(idAuthor));
                     statement2.setString(2, String.valueOf(id));
-                    int i2 = statement2.executeUpdate();
+                    statement2.executeUpdate();
                     connection2.close();
                     return true;
                 }
@@ -100,7 +100,7 @@ public class BookDaoImpl implements BookDao {
                     PreparedStatement statement3 = connection3.prepareStatement("update books set genre_id = ? where id = ?");
                     statement3.setString(1, String.valueOf(idGenre));
                     statement3.setString(2, String.valueOf(id));
-                    int i3 = statement3.executeUpdate();
+                    statement3.executeUpdate();
                     connection3.close();
                     return true;
                 }
@@ -112,7 +112,7 @@ public class BookDaoImpl implements BookDao {
                 PreparedStatement statement4 = connection4.prepareStatement("update books set isbn = ? where id = ?");
                 statement4.setString(1, newName);
                 statement4.setString(2, String.valueOf(id));
-                int i4 = statement4.executeUpdate();
+                statement4.executeUpdate();
                 connection4.close();
                 return true;
         }

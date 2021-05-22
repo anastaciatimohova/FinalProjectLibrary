@@ -39,6 +39,7 @@ public class Application {
                 case 6:
                     bookService.close();
                     exit = false;
+                    break;
             }
         }
     }
