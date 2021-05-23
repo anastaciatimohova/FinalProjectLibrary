@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding="UTF-8" ?>
+
+<books>
+    <book>
+        <title>Война и мир</title>
+        <author>Толстой</author>
+        <genre>CLASSIC</genre>
+        <isbn>1155-4477-6598</isbn>
+    </book>
+
+    <book>
+        <title>Сто лет одиночества</title>
+        <author>Габриэль Гарсия Маркес</author>
+        <genre>ROMANCE</genre>
+        <isbn>6655-4478-2211</isbn>
+    </book>
+
+    <book>
+        <title>Дэвид Коперфильд</title>
+        <author>Чарльз Диккенз</author>
+        <genre>CLASSIC</genre>
+        <isbn>5544-7845-3625</isbn>
+    </book>
+</books>
